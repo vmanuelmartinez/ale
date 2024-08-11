@@ -13,5 +13,5 @@ document.addEventListener('DOMContentLoaded', () => {
         button.style.top = `${Math.random() * (window.innerHeight - button.offsetHeight)}px`;
     }
 
-    button.addEventListener('click', moveButtonRandomly);
+    button.addEventListener('touch', moveButtonRandomly);
 });

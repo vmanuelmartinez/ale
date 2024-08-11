@@ -11,7 +11,7 @@ body {
 .title-img h1{
     color: #fff;
     text-transform:uppercase;
-    font-size: 30px;
+    font-size: 90px;
 }
 .container .title-img{
     display: flex;
@@ -27,8 +27,8 @@ body {
 }
 
 .botoes button{
-    width: 200px;
-    height: 60px;
+    width: 350px;
+    height: 100px;
     margin: 20px;
     font-size: 30px;
     border: none;
