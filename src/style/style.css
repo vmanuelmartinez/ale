@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background-color: #aa20aa;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.title-img h1{
+    color: #fff;
+    text-transform:uppercase;
+    font-size: 30px;
+}
+.container .title-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.botoes{
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    
+}
+
+.botoes button{
+    width: 200px;
+    height: 60px;
+    margin: 20px;
+    font-size: 30px;
+    border: none;
+    border-radius: 5px;
+   
+}
+
+.botoes button:hover{
+    background-color: #7a3174;
+}
