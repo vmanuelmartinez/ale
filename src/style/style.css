@@ -44,13 +44,19 @@
 }
 
 .botoes button {
+    position: relative;
     width: 150px;
     height: 100px;
     margin: 20px;
     font-size: 30px;
     border: none;
     border-radius: 5px;
+    background-color: #eee; /* Color de fondo para pruebas */
+    z-index: 10; /* Asegúrate de que el botón esté en la parte superior */
+}
 
+.no button {
+    z-index: 20; /* Asegúrate de que el botón "NO" tenga un z-index alto */
 }
 
 .botoes button:hover {

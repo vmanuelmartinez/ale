@@ -17,14 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Función para manejar el clic y el toque
-    function manejarClick(event) {
+    function manejarInteraccion(event) {
         event.preventDefault(); // Prevenir el comportamiento por defecto en móviles
         moverNoBtn();
     }
 
     // Eventos para el botón "NO"
-    noBtn.addEventListener('click', manejarClick);
-    noBtn.addEventListener('touchstart', manejarClick); // Para dispositivos móviles
+    noBtn.addEventListener('click', manejarInteraccion);
+    noBtn.addEventListener('touchstart', manejarInteraccion); // Para dispositivos móviles
 
     // Evento para el botón "SÍ"
     yesBtn.addEventListener('click', () => {
