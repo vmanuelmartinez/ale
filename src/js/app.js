@@ -12,12 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const x = Math.random() * (ancho - noBtn.offsetWidth);
         const y = Math.random() * (alto - noBtn.offsetHeight);
         noBtn.style.position = 'absolute';
-        noBtn.style.left = `${x}px`;
-        noBtn.style.top = `${y}px`;
+        noBtn.style.left = `${Math.max(0, x)}px`;
+        noBtn.style.top = `${Math.max(0, y)}px`;
     }
 
     // Función para manejar el clic y el toque
-    function manejarClick() {
+    function manejarClick(event) {
+        event.preventDefault(); // Prevenir el comportamiento por defecto en móviles
         moverNoBtn();
     }
 
