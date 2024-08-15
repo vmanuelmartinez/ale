@@ -16,13 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
         noBtn.style.top = `${y}px`;
     }
 
-    // Evento para el botón "NO"
-    noBtn.addEventListener('touch', () => {
+    // Función para manejar el clic y el toque
+    function manejarClick() {
         moverNoBtn();
-    });
+    }
+
+    // Eventos para el botón "NO"
+    noBtn.addEventListener('click', manejarClick);
+    noBtn.addEventListener('touchstart', manejarClick); // Para dispositivos móviles
 
     // Evento para el botón "SÍ"
-    yesBtn.addEventListener('touch', () => {
+    yesBtn.addEventListener('click', () => {
         container.style.display = 'none';  // Oculta el contenedor de botones
         mensaje.style.display = 'block';   // Muestra el mensaje
         musica.play();                     // Reproduce la música
