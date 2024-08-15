@@ -1,17 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const button = document.getElementById('no');
+    const yesBtn = document.getElementById('yes-btn');
+    const noBtn = document.getElementById('no-btn');
+    const musica = document.getElementById('musica');
+    const mensaje = document.getElementById('mensaje');
+    const container = document.querySelector('.container');
 
-    if (!button) {
-        console.error('El botón con id "no" no se encontró.');
-        return;
+    // Función para mover el botón "NO" a una ubicación aleatoria
+    function moverNoBtn() {
+        const ancho = window.innerWidth;
+        const alto = window.innerHeight;
+        const x = Math.random() * (ancho - noBtn.offsetWidth);
+        const y = Math.random() * (alto - noBtn.offsetHeight);
+        noBtn.style.position = 'absolute';
+        noBtn.style.left = `${x}px`;
+        noBtn.style.top = `${y}px`;
     }
 
-    function moveButtonRandomly() {
-        // Asegúrate de que el botón puede moverse correctamente
-        button.style.position = 'absolute'; // Necesario para mover el botón
-        button.style.left = `${Math.random() * (window.innerWidth - button.offsetWidth)}px`; 
-        button.style.top = `${Math.random() * (window.innerHeight - button.offsetHeight)}px`;
-    }
+    // Evento para el botón "NO"
+    noBtn.addEventListener('click', () => {
+        moverNoBtn();
+    });
 
-    button.addEventListener('touch', moveButtonRandomly);
+    // Evento para el botón "SÍ"
+    yesBtn.addEventListener('click', () => {
+        container.style.display = 'none';  // Oculta el contenedor de botones
+        mensaje.style.display = 'block';   // Muestra el mensaje
+        musica.play();                     // Reproduce la música
+    });
 });

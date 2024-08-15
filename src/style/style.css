@@ -1,41 +1,64 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
-    color: #333;
-    background-color: #aa20aa;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-.title-img h1{
+
+@media (max-width: 480px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        color: #333;
+        background-color: #aa20aa;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+.title-img h1 {
     color: #fff;
-    text-transform:uppercase;
-    font-size: 90px;
+    text-transform: uppercase;
+    font-size: 40px;
 }
-.container .title-img{
+
+.title-img img{
+    width: 220px;
+    height: 200px;
+}
+}
+
+
+
+
+.container .title-img {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.botoes{
+.container span{
+    color: aqua;
+}
+
+.botoes {
     display: flex;
     margin-top: 30px;
     justify-content: center;
-    
+
 }
 
-.botoes button{
-    width: 350px;
+.botoes button {
+    width: 150px;
     height: 100px;
     margin: 20px;
     font-size: 30px;
     border: none;
     border-radius: 5px;
-   
+
 }
 
-.botoes button:hover{
-    background-color: #7a3174;
+.botoes button:hover {
+    background-color: #2e1685e8;
+}
+
+#mensaje h1{
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
 }
