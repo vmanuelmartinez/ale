@@ -17,12 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Evento para el botón "NO"
-    noBtn.addEventListener('click', () => {
+    noBtn.addEventListener('touch', () => {
         moverNoBtn();
     });
 
     // Evento para el botón "SÍ"
-    yesBtn.addEventListener('click', () => {
+    yesBtn.addEventListener('touch', () => {
         container.style.display = 'none';  // Oculta el contenedor de botones
         mensaje.style.display = 'block';   // Muestra el mensaje
         musica.play();                     // Reproduce la música
